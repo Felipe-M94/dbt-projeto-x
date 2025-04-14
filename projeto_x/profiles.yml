@@ -1,0 +1,10 @@
+projeto_x:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: data-felipe
+      dataset: "{{ env_var('DBT_DBNAME', 'dbt_dw') }}"
+      threads: 4 
+      keyfile: /Users/Job/.dbt/data-felipe-951883fcd0f3.json
